@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import Home from "./Components/Home";
+import Products from "./Components/Products";
+import State from "./Components/States/State";
+
+const Virat = () => {
+  alert("hey u clicked");
+};
 
 function App() {
+  let name = "Shyam";
+  let age = 54564;
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {/* <Products /> */}
+      <State />
+      {/* <Home
+        username={name}
+        userage={age}
+        address="Hyderabad"
+        num={45}
+        Navbar={false}
+        Kohli={Virat}
+      /> */}
+    </>
   );
 }
 
