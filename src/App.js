@@ -1,5 +1,7 @@
 import Home from "./Components/Home";
+import Form from "./Components/Hooks/Form";
 import Products from "./Components/Products";
+import FormValidation from "./Components/States/FormValidation";
 import State from "./Components/States/State";
 
 const Virat = () => {
@@ -12,7 +14,9 @@ function App() {
   return (
     <>
       {/* <Products /> */}
-      <State />
+      {/* <State /> */}
+      {/* <FormValidation /> */}
+      <Form />
       {/* <Home
         username={name}
         userage={age}
