@@ -3,6 +3,8 @@ import Form from "./Components/Hooks/Form";
 import Products from "./Components/Products";
 import FormValidation from "./Components/States/FormValidation";
 import State from "./Components/Hooks/useState/State";
+import Effect from "./Components/Hooks/useEffect/Effect";
+import ReducerHook from "./Components/Hooks/useReducer/ReducerHook";
 
 const Virat = () => {
   alert("hey u clicked");
@@ -13,7 +15,9 @@ function App() {
   let age = 54564;
   return (
     <>
-      <State />
+      {/* <State /> */}
+      {/* <Effect /> */}
+      <ReducerHook />
       {/* <Products /> */}
       {/* <State /> */}
       {/* <FormValidation /> */}
