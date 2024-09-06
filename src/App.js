@@ -5,6 +5,9 @@ import FormValidation from "./Components/States/FormValidation";
 import State from "./Components/Hooks/useState/State";
 import Effect from "./Components/Hooks/useEffect/Effect";
 import ReducerHook from "./Components/Hooks/useReducer/ReducerHook";
+import Reference from "./Components/Hooks/useRef/Reference";
+import Parent from "./Components/Hooks/useContext/Parent";
+import Memoization from "./Components/Hooks/useMemo/Memoization";
 
 const Virat = () => {
   alert("hey u clicked");
@@ -15,9 +18,12 @@ function App() {
   let age = 54564;
   return (
     <>
+      <Memoization />
+      {/* <Parent /> */}
+      {/* <Reference /> */}
       {/* <State /> */}
       {/* <Effect /> */}
-      <ReducerHook />
+      {/* <ReducerHook /> */}
       {/* <Products /> */}
       {/* <State /> */}
       {/* <FormValidation /> */}
