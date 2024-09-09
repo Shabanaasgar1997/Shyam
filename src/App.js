@@ -8,6 +8,11 @@ import ReducerHook from "./Components/Hooks/useReducer/ReducerHook";
 import Reference from "./Components/Hooks/useRef/Reference";
 import Parent from "./Components/Hooks/useContext/Parent";
 import Memoization from "./Components/Hooks/useMemo/Memoization";
+import { Route, Routes } from "react-router-dom";
+import PageNotFound from "./PageNotFound";
+import Back from "./Components/Hooks/useCallBack/Back";
+import Signup from "./CRUD/Signup";
+import Read from "./CRUD/Read";
 
 const Virat = () => {
   alert("hey u clicked");
@@ -18,7 +23,15 @@ function App() {
   let age = 54564;
   return (
     <>
-      <Memoization />
+      <Routes>
+        <Route path="/" element={<Signup />} />
+        <Route path="/read" element={<Read />} />
+        <Route path="/callback" element={<Back />} />
+        <Route path="*" element={<PageNotFound />}>
+          <Route path=":id" element={<PageNotFound />} />
+        </Route>
+      </Routes>
+      {/* <Memoization /> */}
       {/* <Parent /> */}
       {/* <Reference /> */}
       {/* <State /> */}
