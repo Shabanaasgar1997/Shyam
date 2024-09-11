@@ -34,6 +34,14 @@ function Read() {
         });
     }
   };
+
+  const UpdateTheRecord = (id, uname, paswrd) => {
+    console.log(id, uname, paswrd);
+
+    localStorage.setItem("id", id);
+    localStorage.setItem("name", uname);
+    localStorage.setItem("pswd", paswrd);
+  };
   return (
     <>
       <div className="container">
@@ -52,6 +60,15 @@ function Read() {
           {records.map((item) => {
             return (
               <>
+                <div className="card">
+                  <div className="card-body">
+                    <img src={item.image} alt="" className="card-img" />
+                    <div className="card-title">{item.name}</div>
+                    <div className="card-text">{item.pswd}</div>
+                  </div>
+                  <div className="card-footer"></div>
+                </div>
+
                 <tr>
                   <td>{item.id}</td>
                   <td>{item.name}</td>
@@ -63,7 +80,16 @@ function Read() {
                     >
                       Delete
                     </button>
-                    <button className="btn bg-success">Update</button>
+                    <Link to="/update">
+                      <button
+                        className="btn bg-success"
+                        onClick={() =>
+                          UpdateTheRecord(item.id, item.name, item.pswd)
+                        }
+                      >
+                        Update
+                      </button>
+                    </Link>
                   </td>
                 </tr>
               </>
